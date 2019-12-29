@@ -1,51 +1,158 @@
-body {
-    background-color: ;
+
+body{
+    overflow-x: hidden;
 }
 
-header{
-    border: green 0.5px solid;
-    margin: 1% 1% 5%;
-    background-color: green;
-    padding-bottom: 2%;
+@media only screen and (min-width: 870px){
+    header {
+        border: green 0.5px solid;
+        margin: 1% 1% 5%;
+        background-color: green;
+        padding-bottom: 2%;
+    }
+
+    header h5 {
+        color: yellow;
+        padding: 3% 2% 1% 2%;
+    }
+
+    #showbook-btn {
+        border-color: yellow;
+        color: yellow;
+        max-width: 30%;
+        position: absolute;
+        left: 60%;
+        top: 40px;
+    }
+
+    #showbook-btn:hover {
+        color: green;
+        background-color: yellow;
+    }
+
+    .main {
+        border: green 1px solid;
+        border-radius: 3%;
+        padding: 5% 13%;
+        display: none;
+    }
+
+    .form-group {
+        margin-top: 5%;
+    }
+
+    .input-group-text {
+        background-color: green;
+        color: yellow;
+    }
+
+    #add-book-btn {
+        border-color: yellow;
+        color: yellow;
+        background-color: green;
+    }
 }
 
-header h5{
-    color: yellow;
-    padding: 3% 2% 2% 2%;
+@media only screen and (max-width: 870px) and (min-width: 739px){
+
+    header {
+        border: green 0.5px solid;
+        margin: 1% 1% 5%;
+        background-color: green;
+        padding-bottom: 2%;
+    }
+
+    header h5 {
+        color: yellow;
+        padding: 3% 2% 2% 2%;
+    }
+
+    #showbook-btn {
+        border-color: yellow;
+        color: yellow;
+        max-width: 30%;
+        position: absolute;
+        left: 500px;
+        top: 28px;
+    }
+
+    #showbook-btn:hover {
+        color: green;
+        background-color: yellow;
+    }
+
+    .main {
+        border: green 1px solid;
+        border-radius: 5%;
+        padding: 5% 13%;
+        display: none;
+    }
+
+    .form-group {
+        margin-top: 5%;
+    }
+
+    .input-group-text {
+        background-color: green;
+        color: yellow;
+    }
+
+    #add-book-btn {
+        border-color: yellow;
+        color: yellow;
+        background-color: green;
+    }
+
 }
 
-#showbook-btn{
-    border-color: yellow;
-    color: yellow;
-    max-width: 30%;
-    position: absolute;
-    left: 500px;
-    top: 28px;
-}
+@media only screen and (max-width: 738px) {
+   header {
+       border: green 0.5px solid;
+       margin: 1% 1% 5%;
+       background-color: green;
+       padding-bottom: 2%;
+   }
 
-#showbook-btn:hover{
-    color: green;
-    background-color: yellow;
-}
+   header h5 {
+       color: yellow;
+       padding: 3% 2% 2% 2%;
+       text-align: center;
+   }
 
-.main{
-    border: green 1px solid;
-    border-radius: 5%;
-    padding: 5% 13%;
-    display: none;
-}
+   .form-btn{
+       text-align: center;
+   }
+   #showbook-btn {
+       border-color: yellow;
+       color: yellow;
+       max-width: 40%;
+       margin-left: 30%;
+   }
 
-.form-group {
-    margin-top: 5%;
-}
+   #showbook-btn:hover {
+       color: green;
+       background-color: yellow;
+   }
 
-.input-group-text{
-    background-color: green;
-    color: yellow;
-}
+   .main {
+       border: green 1px solid;
+       border-radius: 5%;
+       padding: 5% 13%;
+       display: none;
+   }
 
-#add-book-btn{
-    border-color: yellow;
-    color: yellow;
-    background-color: green;
+   .form-group {
+       margin-top: 5%;
+   }
+
+   .input-group-text {
+       background-color: green;
+       color: yellow;
+   }
+
+   #add-book-btn {
+       border-color: yellow;
+       color: yellow;
+       background-color: green;
+   }
 }
