@@ -1,0 +1,51 @@
+body {
+    background-color: ;
+}
+
+header{
+    border: green 0.5px solid;
+    margin: 1% 1% 5%;
+    background-color: green;
+    padding-bottom: 2%;
+}
+
+header h5{
+    color: yellow;
+    padding: 3% 2% 2% 2%;
+}
+
+#showbook-btn{
+    border-color: yellow;
+    color: yellow;
+    max-width: 30%;
+    position: absolute;
+    left: 500px;
+    top: 28px;
+}
+
+#showbook-btn:hover{
+    color: green;
+    background-color: yellow;
+}
+
+.main{
+    border: green 1px solid;
+    border-radius: 5%;
+    padding: 5% 13%;
+    display: none;
+}
+
+.form-group {
+    margin-top: 5%;
+}
+
+.input-group-text{
+    background-color: green;
+    color: yellow;
+}
+
+#add-book-btn{
+    border-color: yellow;
+    color: yellow;
+    background-color: green;
+}
