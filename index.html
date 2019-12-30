@@ -17,7 +17,7 @@
        <div class="container">
          <section class="main">
             <div class="form-group">
-               <div class="error"></div>
+               <div id="error"></div>
                <div id="info-div"
                   class="input-group mb-2">
                   <div class="input-group-prepend">
@@ -26,30 +26,23 @@
                   <input type="text"
                      class="form-control"
                      id="book-name"
-                     placeholder="e.g: Half of yellow sun">
+                     placeholder="e.g: Half of yellow sun" required>
                </div>
                <div class="input-group mb-2">
                   <div class="input-group-prepend">
                      <div class="input-group-text">Book Author</div>
                   </div>
-                  <div class="error-msg"></div>
                   <input type="text"
                      class="form-control"
                      id="book-author"
-                     placeholder="e.g: Chimmamanda">
+                     placeholder="e.g: Chimmamanda" required>
                </div>
                <div class="input-group mb-2">
                   <div class="input-group-prepend">
                      <div class="input-group-text">Category</div>
                   </div>
-                  <div class="num-error-msg"></div>
-                  <select class="custom-select bg-white text-success"
-                     id="grade">
-                     <option value="0">Select</option>
-                     <option value="A">Science</option>
-                     <option value="B">Art</option>
-                     <option value="C">Literature</option>
-                  </select>
+                  <input type="text" class="form-control "
+                     id="category" placeholder="e.g: Literature" required>
                </div>
             </div>
          
@@ -57,6 +50,12 @@
                <input type="submit" id="add-book-btn" class="btn form-control" value="Add Book">
             </div>
          </section>
+         
+         <div class="books">
+            <h6 class="books-header">Library Collection</h6>
+            <ul class="list-group"></ul>
+         </div>
+         </div>
        </div>
         
 

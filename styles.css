@@ -3,6 +3,20 @@ body{
     overflow-x: hidden;
 }
 
+.books h6{
+    border: green 0.5px solid;
+    color: yellow;
+    display: none;
+    margin-top: 3%;
+    background-color: green;
+    padding: 3% 2% 4%;
+    text-align: center;
+}
+
+.books li{
+    margin-bottom: 2%;
+}
+
 @media only screen and (min-width: 870px){
     header {
         border: green 0.5px solid;
@@ -34,6 +48,17 @@ body{
         border: green 1px solid;
         border-radius: 3%;
         padding: 5% 13%;
+        display: none;
+    }
+
+    .error{
+        background-color: rgb(250, 41, 41);
+        padding: 5%;
+        color: white;
+        text-align: center;
+    }
+
+    .error-hide{
         display: none;
     }
 
@@ -79,6 +104,14 @@ body{
     #showbook-btn:hover {
         color: green;
         background-color: yellow;
+    }
+
+    .error {
+        background-color: rgb(250, 41, 41);
+        padding: 5%;
+        color: white;
+        text-align: center;
+        display: block;
     }
 
     .main {
@@ -137,8 +170,16 @@ body{
    .main {
        border: green 1px solid;
        border-radius: 5%;
-       padding: 5% 13%;
+       padding:  2% 5% 13%;
        display: none;
+   }
+
+   .error {
+       background-color: rgb(250, 41, 41);
+       padding: 5%;
+       color: white;
+       text-align: center;
+       display: block;
    }
 
    .form-group {
