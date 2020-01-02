@@ -5,8 +5,10 @@ const bookAuthor = document.getElementById('book-author');
 const bookCategory = document.getElementById('category');
 const addBookBtn = document.getElementById('add-book-btn');
 const libraryTitle = document.querySelector('.books-header');
+const tHead = document.querySelector('.table-head');
+const tBody = document.querySelector('.table-body');
 
-let books = [];
+
 showLibraryForm.addEventListener('click', () => {
     bookForm.style.display = 'block';
 });
@@ -31,14 +33,19 @@ addBookBtn.addEventListener('click', () => {
     }else{
         bookForm.style.display = 'none';
         libraryTitle.style.display = 'block';
-        const newbook = document.createElement('li');
-        newbook.className = 'list-group-item';
-        newbook.innerHTML = `${bookName.value} by ${bookAuthor.value}(${bookCategory.value})`;
-        books.push(newbook);
-        const uL = document.querySelector('.list-group');
-        for(book of books){
-            uL.append(book);
-        }
+        
+    tHead.style.visibility = 'visible';
+        const row = document.createElement('tr');
+        row.innerHTML = `
+                            <tr>
+                                <td>${bookName.value}</td>
+                                <td>${bookAuthor.value}</td>
+                                <td>${bookCategory.value}</td>
+                            </tr>
+                        `
+
+        tBody.append(row);
+
         clearFields();
     }
 });
