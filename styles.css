@@ -3,7 +3,7 @@ body{
     overflow-x: hidden;
 }
 
-.books h6{
+.books-header{
     border: green 0.5px solid;
     color: yellow;
     display: none;
@@ -21,15 +21,16 @@ body{
     visibility: hidden;
 }
 
-.ls-warning{
+.info{
     margin-top: 5%;
     font-size: larger;
     font-weight: bolder;
     text-align: center;
+    background-color: #FFF;
 }
 
 span{
-    color: yellowgreen;
+    color: red;
 }
 
 .delete-btn{
