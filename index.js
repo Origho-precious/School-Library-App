@@ -10,7 +10,7 @@ const libraryTitle = document.querySelector('.books-header');
 const table = document.querySelector('.table');
 const tHead = document.querySelector('.table-head');
 const tBody = document.querySelector('.table-body');
-
+const deleteAllBooksBtn = document.querySelector('#delete-books-btn');
 
 
 // Display BookForm
@@ -35,8 +35,10 @@ const getBookFromlocalStorage = () => {
         libraryTitle.style.display = 'block';
         libraryTitle.className = 'info';
         libraryTitle.innerHTML = 'No Books! <span>Click on Add Book To Library</span>'
+        deleteAllBooksBtn.style.display = 'none';
     } else {
         books = JSON.parse(localStorage.getItem('books'));
+        deleteAllBooksBtn.style.display = 'block';
     }
 
     books.forEach((book) => {
@@ -113,6 +115,8 @@ addBookBtn.addEventListener('click', () => {
         let book = new Book(bookName.value, bookAuthor.value, bookCategory.value);
         storeBookInLocalStorage(book);
 
+        deleteAllBooksBtn.style.display = 'block';
+
         clearFields();
     }
 });
@@ -134,4 +138,10 @@ tBody.addEventListener('click', (e) => {
             }
     }
 });
+
+//  Delete All Button
+deleteAllBooksBtn.addEventListener('click', () => {
+    document.location.reload(true);
+    localStorage.clear();
+})
 

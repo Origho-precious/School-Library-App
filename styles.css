@@ -39,6 +39,17 @@ span{
     text-align: center;
 }
 
+#delete-books-btn{
+    margin-top: 10%;
+    margin-left: 57%;
+    padding: 2% 10%;
+    border-color: yellow;
+    color: yellow;
+    background-color: green;
+    border-radius: 3%;
+}
+
+
 @media only screen and (min-width: 870px){
     header {
         border: green 0.5px solid;
