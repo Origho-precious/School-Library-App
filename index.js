@@ -172,5 +172,5 @@ deleteAllBooksBtn.addEventListener('click', () => {
         document.location.reload(true);
     }
     
-})
+});
 
