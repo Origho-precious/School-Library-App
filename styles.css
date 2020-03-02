@@ -49,6 +49,26 @@ span{
     border-radius: 3%;
 }
 
+.error {
+    background-color: rgb(250, 41, 41);
+    padding: 5%;
+    color: white;
+    text-align: center;
+}
+
+.success {
+    background-color: green;
+    padding: 5%;
+    color: white;
+    text-align: center;
+}
+
+.alert-hide {
+    display: none;
+}
+
+
+
 
 @media only screen and (min-width: 870px){
     header {
@@ -84,16 +104,8 @@ span{
         display: none;
     }
 
-    .error{
-        background-color: rgb(250, 41, 41);
-        padding: 5%;
-        color: white;
-        text-align: center;
-    }
+    
 
-    .error-hide{
-        display: none;
-    }
 
     .form-group {
         margin-top: 5%;
@@ -139,13 +151,8 @@ span{
         background-color: yellow;
     }
 
-    .error {
-        background-color: rgb(250, 41, 41);
-        padding: 5%;
-        color: white;
-        text-align: center;
-        display: block;
-    }
+    
+
 
     .main {
         border: green 1px solid;

@@ -90,7 +90,7 @@ addBookBtn.addEventListener('click', () => {
         errorMsg.innerHTML = '<h6>Please fill all InputFields!</h6>';
         clearFields();
         const errorHandler = () => {
-            errorMsg.className = 'error-hide';
+            errorMsg.className = 'alert-hide';
             errorMsg.innerHTML = '';
         }
         setTimeout(errorHandler, 3000);
@@ -115,6 +115,16 @@ addBookBtn.addEventListener('click', () => {
         let book = new Book(bookName.value, bookAuthor.value, bookCategory.value);
         storeBookInLocalStorage(book);
 
+        let successMsg = `<h6 class="success">Book successfully added!</h6>`;
+        const alert = document.querySelector('.alert');
+        alert.innerHTML = successMsg;
+
+        const errorHandler = () => {
+            alert.className = 'alert-hide';
+            alert.innerHTML = '';
+        }
+        setTimeout(errorHandler, 3000);
+
         deleteAllBooksBtn.style.display = 'block';
 
         clearFields();
@@ -125,12 +135,25 @@ addBookBtn.addEventListener('click', () => {
 tBody.addEventListener('click', (e) => {
     if(e.target.className === 'delete-btn'){
         e.target.parentElement.remove();
+
         let books = JSON.parse(localStorage.getItem('books'));
         books.forEach((book, index) => {
             if(e.target.parentElement.firstElementChild.textContent === book.name){
                 books.splice(index, 1);
             }
         });
+
+        let successMsg = `<h6 class="success">Book successfully deleted!</h6>`;
+        const alert = document.querySelector('.alert');
+        alert.innerHTML = successMsg;
+
+        const errorHandler = () => {
+            alert.className = 'alert-hide';
+            alert.innerHTML = '';
+        }
+        setTimeout(errorHandler, 3000);
+
+
             localStorage.setItem('books', JSON.stringify(books));
             if(books.length == 0){
                 document.location.reload(true);
@@ -141,7 +164,13 @@ tBody.addEventListener('click', (e) => {
 
 //  Delete All Button
 deleteAllBooksBtn.addEventListener('click', () => {
-    document.location.reload(true);
-    localStorage.clear();
+    const confirmMsg = confirm('Are you sure?');
+    if(confirmMsg == true){
+        localStorage.clear();
+        document.location.reload(true);
+    }else {
+        document.location.reload(true);
+    }
+    
 })
 
